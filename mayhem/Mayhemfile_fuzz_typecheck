@@ -1,0 +1,9 @@
+project: savantenvs/dhall-rust
+target: fuzz_typecheck
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_typecheck/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_typecheck
+    libfuzzer: true
+    timeout: 30

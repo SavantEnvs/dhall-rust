@@ -1,0 +1,18 @@
+[package]
+name = "dhall-rust-mayhem-kat"
+version = "0.0.0"
+edition = "2018"
+publish = false
+
+# Standalone crate under mayhem/ — needs its own empty [workspace] table for the
+# same reason as mayhem/fuzz (see the comment there); never a member of the
+# upstream root workspace.
+[workspace]
+
+[dependencies.dhall]
+path = "../../dhall"
+default-features = false
+
+[[bin]]
+name = "kat"
+path = "src/main.rs"
