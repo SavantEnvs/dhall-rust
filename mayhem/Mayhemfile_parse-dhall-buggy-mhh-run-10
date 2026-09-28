@@ -1,0 +1,7 @@
+project: savantenvs/dhall-rust
+target: parse-dhall-buggy-mhh-run-10
+# origin: https://app.mayhem.security/mayhemheroes/dhall-rust/parse-dhall/10
+cmds:
+  - cmd: /mayhem/fuzz_typecheck
+    libfuzzer: true
+    timeout: 30
